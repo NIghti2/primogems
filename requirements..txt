@@ -1,0 +1,5 @@
+pyTelegramBotAPI
+BeautifulSoup4
+requests
+lxml
+sleep
