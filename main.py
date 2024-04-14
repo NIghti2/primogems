@@ -1,6 +1,6 @@
-import requests
-from bs4 import BeautifulSoup
 
+from bs4 import BeautifulSoup
+import requests
 import lxml
 from time import sleep
 import telebot
