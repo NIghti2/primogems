@@ -1,5 +1,1 @@
-pyTelegramBotAPI
-bs4
-requests
-lxml
-sleep
+beautifulsoup4
