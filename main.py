@@ -10,7 +10,7 @@ url = 'https://landofgames.ru/articles/guides/9832-promokody-dlya-genshin-impact
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43',
            'Accept':'image / webp, image / apng, image / svg + xml, image / *, * / *;q = 0.8'}
 
-def parser1(url='https://landofgames.ru/articles/guides/9832-promokody-dlya-genshin-impact-kamni-istoka-ochki-priklyucheniy-i-mora.html'):
+def parser1(url=url):
     req = requests.get(url, headers=headers)
     soup = BeautifulSoup(req.text, 'lxml')
     a = soup.find_all('div', class_="text ru p-l")
@@ -36,7 +36,7 @@ bot = telebot.TeleBot('5175620501:AAHK5743qMFEaWBYXDbp4VH3rsgytYofXrk')
 def main(message):
     while True:
         if cheacker():
-            bot.send_message(message.chat.id, f'{parser1()}')
+            bot.send_message(message.chat.id, f'{parser1(url=url)}')
         else:
             sleep(3600)
 bot.polling(none_stop=True)
